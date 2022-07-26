@@ -56,11 +56,10 @@
 
 // export default Register;
 
-import React, { Component } from 'react'
+import React, { Component } from "react";
 export default function Register() {
-    return (
-      <form style = {{width: 500}}>
-        <h3>Sign Up</h3>
+  return (
+      <form style={{ width: 300, margin:50}}>
         <div className="mb-3">
           <label>First name</label>
           <input
@@ -98,5 +97,5 @@ export default function Register() {
           Already registered <a href="/sign-in">sign in?</a>
         </p>
       </form>
-    )
-  }
+  );
+}

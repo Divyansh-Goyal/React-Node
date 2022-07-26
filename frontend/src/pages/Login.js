@@ -4,7 +4,7 @@ import React, { Component } from 'react'
 
 export default function Login() {
     return (
-      <Form>
+      <Form style={{ width: 300, margin:50}}>
         <h3>Sign In</h3>
         <div className="mb-3">
           <label>Email address</label>

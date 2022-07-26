@@ -9,7 +9,6 @@ const expressApp = require("./express");
 const app = express();
 require("dotenv").config();
 
-
 // Database conection
 mongoose
   .connect(process.env.MONGO_URL, {
@@ -17,11 +16,14 @@ mongoose
     useUnifiedTopology: true,
   })
   .then((resp) => {
-    console.log(`DB connection Succesfull ${resp}`);
+    console.log(`DB connection Succesfull `);
   })
   .catch((err) => {
     console.log(err.message);
   });
+  var db = mongoose.connection
+  db.on('error', console.error.bind(console, 'MongoDb Connection Error'));
+
 
 //Server PORT running   
 const server = app.listen(process.env.PORT, async() => {
